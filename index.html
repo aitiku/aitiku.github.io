@@ -753,65 +753,46 @@
         }
         
         .experience-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            display: flex;
+            flex-direction: column;
             align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
             position: relative;
             z-index: 1;
         }
         
-        .experience-image {
-            overflow: hidden;
-            border-radius: var(--border-radius);
-            box-shadow: var(--card-shadow);
-            height: 450px;
-            border: 1px solid rgba(59, 130, 246, 0.1);
-            position: relative;
-        }
-        
-        .experience-image::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
+        .experience-text {
             width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom right, rgba(6, 182, 212, 0.2), transparent);
-        }
-        
-        .experience-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.7s ease;
-        }
-        
-        .experience-image:hover {
-            box-shadow: var(--border-glow);
-            border-color: var(--accent-color);
-        }
-        
-        .experience-image:hover img {
-            transform: scale(1.05);
         }
         
         .tech-features {
             margin-top: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
         }
         
         .tech-feature {
+            width: 100%;
+            max-width: 600px;
+            text-align: left;
+            margin-bottom: 2rem;
+            background-color: rgba(15, 23, 42, 0.6);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            transition: var(--transition);
             display: flex;
             align-items: flex-start;
-            margin-bottom: 2rem;
-            transition: var(--transition);
-            padding: 1rem;
-            border-radius: var(--border-radius);
         }
         
         .tech-feature:hover {
-            background-color: rgba(15, 23, 42, 0.6);
-            transform: translateX(10px);
+            transform: translateY(-5px);
+            box-shadow: var(--border-glow);
+            border-color: var(--accent-color);
         }
         
         .tech-icon {
@@ -1490,7 +1471,6 @@
             </div>
             
             <div class="experience-container">
-                
                 <div class="experience-text">
                     <p>Experience the perfect fusion of heritage and innovation through our custom app and interactive tableside digital menus. Our integrated system connects the authentic angkringan experience with cutting-edge technology, creating a unique digital-physical environment where tradition and modern convenience coexist harmoniously.</p>
                     
@@ -1651,7 +1631,6 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
     </section>
